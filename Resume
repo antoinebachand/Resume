@@ -1,0 +1,240 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Antoine Bachand} \\ \vspace{5pt}
+    \small \faPhone* \texttt{+354.789.7446} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{antoinebachand@outlook.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/antoinebachand}{\myuline {GitHub Antoine Bachand}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Canada/Iceland}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Iceland School of Energy}{May 2021.  -- Apr. 2023}
+      {MSc Sustainable Energy Engineering}{Reykjavik, Iceland}
+      	\resumeItemListStart
+    	\resumeItem {\textbf{Thesis}: Focused on the modelling of cyclic hydrogen storage with multiphase flow and heat transfer \href{https://github.com/antoinebachand/Kushnir_Method_2012}{\myuline {GitHub}}.}
+        \resumeItem 
+{\textbf{Partners}: Hydro-Québec and National institute of scientific research. }
+    \resumeItem 
+            {\textbf{Coursework}: Machine Learning, Deep Learning, Data Mining, Optimization Methods, Wind Power, Finance. }
+    \resumeItem 
+            {\textbf{Research Grants}: NSERC \textbf{\$17 500 CAD}, Desjardins \textbf{\$5 000 CAD }, (Co-Applicant) FRQNT Impulsion \textbf{\$75 000 CAD}.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Université Laval}{Sep. 2017 -- Apr. 2021}
+      {Bachelor in Geological Engineering (GPA: 3.8/4.3)}{Québec, QC}
+      	\resumeItemListStart
+    	\resumeItem {\textbf{Award}: Over \textbf{\$14 000 CAD} in scholarship: NSERC, FRQNT, John Steers, AMQ, Foncer TEDGIER, CIM.}       
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {National Institute of Scientific Research}{May 2020 -- May 2021}
+      {Research intern}{Québec, QC}
+      \resumeItemListStart
+        \resumeItem{Developed analytical \href{https://github.com/antoinebachand/CAES/blob/main/core_graphique.py}{\myuline {(GuitHub)}} and numerical models to assess the potential of compressed air energy storage; }
+        \resumeItem{Wrote a technical report and a \textbf{conference paper} that was the subject of a \textbf{radio interview}  with \href{https://ici.radio-canada.ca/ohdio/premiere/emissions/bon-pied-bonne-heure/segments/entrevue/188141/energie}{\myuline {Radio-Canada}};}
+         \resumeItem{Partnered with Nergica to expand their outreach in the energy storage field.}
+       
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Osisko Metals}{May 2019 -- Sep. 2019}
+      {Geological Engineering Intern}{Québec, QC}
+      \resumeItemListStart
+        \resumeItem{Conducted data compilation, conductive anomalies exploration and  rock sampling.  }
+       
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Excursions Jacques-Cartier}{May 2019 -- Aug. 2021}
+      {White water rafting expedition leader}{Stoneham, QC}
+      \resumeItemListStart
+        \resumeItem{Responsible for the safety of \textbf{10 to 70 people}  in  \textbf{class 4 rapids} and led a team of \textbf{\ 7 guides }.}       
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Backpropagation}} {Sep. 2019 -- Mar. 2021}
+          \resumeItemListStart
+            \resumeItem{ Implemented the algorithm that is the backbone of a neural network using only linear algebra and other mathematical tools available in numpy to get an overview of how the algorithm works  \href{https://github.com/antoinebachand/Machine-Learning-/blob/main/Back_propagation_Antoine.py}{\myuline {GithHub}}.}
+            
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\textbf{Neural network for stock prediction}}{Sep. 2020 -- Nov. 2020}
+          \resumeItemListStart
+            \resumeItem{Developed a neural network model with PyTorch that finished\textbf{\ first out of 10 groups } in terms of accuracy in predicting stock trends \href{https://github.com/antoinebachand/Deep-Learnig-/blob/main/Stock_Market_NN_Predictor.ipynb}{\myuline {Google Colab}}.}           
+          \resumeItemListEnd                    
+    \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: Python, Matlab}\vspace{2pt} \\
+     \textbf{Tools}     {: Google Colab, COMSOL Multiphysics, GitHub, PyTorch, LaTex. }
+    }}
+ \end{itemize}
+
+%--------------PUBLICATION-----------------
+\section{PUBLICATION}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Conference article: } {Bachand, A., Raymond, J., 2021. Assessment of compressed air energy storage (CAES) potential in boreholes using an iterative method to estimate air leakage. Presented at the GeoNiagara Conference, Niagara.  \href{https://s3.amazonaws.com/amz.xcdsystem.com/BA0139BE-AE38-A08C-FA90B51D5ED577F7_abstract_File331/GeoNiagara2021Paper_31_0725053419.pdf}{\myuline {DOI}}}\vspace{2pt} \\
+     
+    }}
+ \end{itemize}
+
+
+
+%-------------------------------------------
+\end{document}
